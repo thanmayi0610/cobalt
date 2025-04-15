@@ -15,28 +15,28 @@ export default () => {
  
   return (
     <Container>
-    <div>
-      <ol className="flex flex-row items-center justify-center gap-8 ">
-        <li key={paths.home} className={path ==paths.home ? "text-red-800" : ""}>
+    <nav>
+      <ul className="flex flex-row items-center justify-center gap-8 list-none py-4">
+        <li key={paths.home} className={path ==paths.home ? "text-blue-800 font-bold" : ""}>
           <Link href="/">Home</Link>
         </li>
         <li
           key={paths.enterprise}
-          className={path == "paths.enterprise" ? "text-green-800" : ""}
+          className={path == "paths.enterprise" ? "text-blue-800 font-bold" : ""}
         >
           <Link href="/enterprise">Enterprise</Link>
         </li>
         <li
           key={paths.pricing}
-          className={path == paths.pricing ? "text-blue-900" : ""}
+          className={path == paths.pricing ? "text-blue-800 font-bold" : ""}
         >
           <Link href="/pricing">Pricing</Link>
         </li>
-        <li key={paths.blog} className={path == paths.blog ? "text-blue-900" : ""}>
+        <li key={paths.blog} className={path == paths.blog ? "text-blue-800 font-bold" : ""}>
           <Link href="/blog">Blogs</Link>
         </li>
-      </ol>
-    </div>
+      </ul>
+    </nav>
     </Container>
   );
 };

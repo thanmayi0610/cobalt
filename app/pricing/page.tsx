@@ -1,4 +1,4 @@
 const Page = () => {
-    return <h1>Enterprise</h1>;
+    return <h1 className="text-4xl font-bold">Pricing</h1>;
 }
 export default Page;

@@ -27,17 +27,17 @@ export const metadata: Metadata = {
 
 
 const RootLayout = (props: PropsWithChildren) => {
-  return <html>
+  return( <html>
       <body className = {inter.className }>
         <div className = "flex flex-col items-stretch ">
        <NavigationBar />
        
-       <Container>
-        {props.children}
-        </Container>
+       <div className="border-b-[1px] border-b-[#EAEAEA]" />
+       <Container className="py-4">{props.children}</Container>
+
         </div>
       </body>
     </html>
-  
+  );
 };
 export default RootLayout;
