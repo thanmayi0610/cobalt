@@ -1,4 +1,4 @@
-"use client";
+
 import {use} from "react";
 export default (props: {params: Promise<{slug: string}>}) => {
     const {slug} = use(props.params);
