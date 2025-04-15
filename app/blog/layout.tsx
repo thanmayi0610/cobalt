@@ -1,5 +1,7 @@
 import Link from "next/link";
+
 import {PropsWithChildren} from "react";
+import BlogLink from "./components/BlogLink";
 export default ( props: PropsWithChildren) => {
     return(
     <div className = "h-screen flex flex-row ">
@@ -9,7 +11,7 @@ export default ( props: PropsWithChildren) => {
   {[1, 2, 3, 4].map((slug) => {
     return (
       <li key={slug}>
-        <Link href={`/blog/${slug}`}>Blog {slug}</Link>
+        <BlogLink slug={slug.toString()} />
       </li>
     );
   })}
