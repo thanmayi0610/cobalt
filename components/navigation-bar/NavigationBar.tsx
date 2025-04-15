@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Container from "../container/container"; // Adjust the path as needed
 
 export default () => {
   const path = usePathname();
@@ -13,6 +14,7 @@ export default () => {
   };
  
   return (
+    <Container>
     <div>
       <ol className="flex flex-row items-center justify-center gap-8 ">
         <li key={paths.home} className={path ==paths.home ? "text-red-800" : ""}>
@@ -35,5 +37,6 @@ export default () => {
         </li>
       </ol>
     </div>
+    </Container>
   );
 };
