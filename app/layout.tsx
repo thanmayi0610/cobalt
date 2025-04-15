@@ -27,6 +27,7 @@ const RootLayout = (props: PropsWithChildren) => {
         <div className = "flex flex-col items-stretch ">
        <NavigationBar />
        
+       
         {props.children}
         </div>
       </body>
