@@ -1,8 +1,13 @@
 import "./globals.css";
 import { PropsWithChildren } from "react" 
 import { Metadata } from "next";
+import Container from "../components/container/container"; // Adjust the path as needed
 import NavigationBar from "@/components/navigation-bar/NavigationBar";
-
+import { Inter } from "next/font/google";
+const inter = Inter({
+  subsets: ["latin"],
+ 
+});
 export const metadata: Metadata = {
   title: "Cobalt — Everything About The Essential Metal",
   description:
@@ -23,12 +28,13 @@ export const metadata: Metadata = {
 
 const RootLayout = (props: PropsWithChildren) => {
   return <html>
-      <body>
+      <body className = {inter.className }>
         <div className = "flex flex-col items-stretch ">
        <NavigationBar />
        
-       
+       <Container>
         {props.children}
+        </Container>
         </div>
       </body>
     </html>
